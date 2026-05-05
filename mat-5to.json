@@ -16,7 +16,7 @@
             {
               "exercise_id": "ex01_01_01",
               "interaction_type": "multiple_choice",
-              "question": "¿El siguiente número es racional o irracional?",
+              "instruction": "Selecciona la respuesta correcta",
               "math_expression": "6 \\frac{1}{2}",
               "correct_answer_id": "opt_a",
               "options": [
@@ -25,91 +25,78 @@
               ],
               "explanation": [
                 "Un número racional es cualquier número que puede expresarse como la fracción de dos enteros.",
-                "Todos los números mixtos pueden expresarse como la fracción de dos enteros.",
                 "El número mixto 6 1/2 puede expresarse como la fracción impropia 13/2. Por lo tanto, es racional."
               ]
             },
             {
               "exercise_id": "ex01_01_02",
-              "interaction_type": "multiple_choice",
-              "question": "¿El siguiente número es racional o irracional?",
-              "math_expression": "\\pi",
-              "correct_answer_id": "opt_b",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza las raíces y continúa el patrón de clasificación",
+              "grid_data": [
+                { "cell": "\\sqrt{4}", "value": "Racional" },
+                { "cell": "\\sqrt{9}", "value": "Racional" },
+                { "cell": "\\sqrt{11}", "value": "[?]" }
               ],
+              "correct_answer": "Irracional",
+              "options": ["Racional", "Irracional"],
               "explanation": [
-                "Los números racionales se pueden escribir como una fracción exacta.",
-                "El número π (Pi) equivale aproximadamente a 3.14159265...",
-                "Sus decimales son infinitos y no siguen ningún patrón repetitivo. No existe ninguna fracción que sea exactamente igual a π.",
-                "Por lo tanto, es irracional."
+                "La raíz de 4 es 2 (entero/racional). La raíz de 9 es 3 (entero/racional).",
+                "El 11 no tiene raíz exacta. Sus decimales son infinitos y sin patrón, por lo que es irracional."
               ]
             },
             {
               "exercise_id": "ex01_01_03",
-              "interaction_type": "multiple_choice",
-              "question": "¡Cuidado con la trampa! ¿Este número es racional o irracional?",
-              "math_expression": "\\sqrt{25}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "number_line",
+              "instruction": "Cuidado con las raíces exactas. Responde en la recta numérica.",
+              "math_expression": "\\sqrt{25} = [?]",
+              "correct_answer": 5,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
               "explanation": [
                 "No todos los números con el símbolo de raíz son irracionales.",
-                "Calculamos el valor: La raíz cuadrada de 25 es exactamente 5.",
-                "El número 5 es un número entero. Todo número entero se puede escribir como fracción (5/1).",
-                "Por lo tanto, es racional."
+                "La raíz cuadrada de 25 es exactamente 5. Como 5 es un número entero, es un número racional."
               ]
             },
             {
               "exercise_id": "ex01_01_04",
-              "interaction_type": "multiple_choice",
-              "question": "¿El siguiente número es racional o irracional?",
-              "math_expression": "\\sqrt{11}",
-              "correct_answer_id": "opt_b",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "fill_in_blank",
+              "instruction": "Demuestra que este decimal periódico es un número racional completando la fracción.",
+              "math_expression": "0.\\overline{33} = \\frac{[?]}{3}",
+              "correct_answer": "1",
+              "options": ["1", "3", "33"],
               "explanation": [
-                "El número 11 no es un cuadrado perfecto (no hay ningún número entero que multiplicado por sí mismo dé 11).",
-                "Al calcular su raíz cuadrada, obtenemos infinitos decimales que no siguen un patrón (3.31662...).",
-                "Al no poder expresarse como fracción, es un número irracional."
+                "Los decimales periódicos (que repiten un patrón infinito) SIEMPRE se pueden convertir a fracción.",
+                "El decimal 0.333... equivale exactamente a la fracción 1/3."
               ]
             },
             {
               "exercise_id": "ex01_01_05",
-              "interaction_type": "multiple_choice",
-              "question": "Analiza los decimales: ¿Racional o irracional?",
-              "math_expression": "0.\\overline{33}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada número con su clasificación correcta",
+              "pairs": [
+                { "left": "\\pi", "right": "Irracional" },
+                { "left": "-2.75", "right": "Racional" },
+                { "left": "\\sqrt{7}", "right": "Irracional" },
+                { "left": "100", "right": "Racional" }
               ],
               "explanation": [
-                "Este es un número decimal periódico puro. La línea superior indica que el 33 se repite hasta el infinito.",
-                "Aunque tenga decimales infinitos, al seguir un patrón estricto, SIEMPRE se puede convertir en una fracción.",
-                "En este caso, equivale exactamente a la fracción 1/3.",
-                "Por lo tanto, es racional."
+                "Pi y las raíces no exactas (como √7) son irracionales.",
+                "Los decimales exactos (-2.75) y los enteros (100) son siempre racionales porque pueden escribirse como fracción."
               ]
             },
             {
               "exercise_id": "ex01_01_06",
-              "interaction_type": "multiple_choice",
-              "question": "¿El siguiente número es racional o irracional?",
-              "math_expression": "-2.75",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "equation_builder",
+              "instruction": "Un decimal exacto es racional. Arma su equivalencia en fracción.",
+              "math_expression": "-2.5 = - \\frac{[?]}{[?]}",
+              "available_tiles": ["5", "2", "4", "25"],
+              "correct_sequence": ["5", "2"],
               "explanation": [
-                "Este es un número decimal finito o exacto (sus decimales terminan).",
-                "Cualquier decimal finito puede escribirse como fracción. Por ejemplo, -2.75 es igual a -275/100, que se simplifica a -11/4.",
-                "Como puede expresarse como la fracción de dos enteros, es racional."
+                "-2.5 se lee como 'menos cinco medios'.",
+                "Se escribe como la fracción impropia -5/2."
               ]
             }
           ]
@@ -121,7 +108,7 @@
             {
               "exercise_id": "ex01_02_01",
               "interaction_type": "multiple_choice",
-              "question": "Al resolver la siguiente suma, ¿el resultado es racional o irracional?",
+              "instruction": "Evalúa el resultado de la siguiente suma",
               "math_expression": "3 + \\sqrt{2}",
               "correct_answer_id": "opt_b",
               "options": [
@@ -129,91 +116,84 @@
                 { "id": "opt_b", "text": "Irracional" }
               ],
               "explanation": [
-                "Tenemos la suma de un número racional (3) y un número irracional (la raíz cuadrada de 2).",
                 "Regla de oro: La suma o resta de un número racional con un número irracional SIEMPRE da como resultado un número irracional.",
-                "No hay forma de que los decimales infinitos de la raíz desaparezcan al sumar un entero. El resultado es irracional."
+                "No hay forma de que los decimales infinitos de la raíz desaparezcan al sumar un entero."
               ]
             },
             {
               "exercise_id": "ex01_02_02",
-              "interaction_type": "multiple_choice",
-              "question": "¡Cuidado con esta trampa! Al multiplicar estos dos números, ¿qué obtienes?",
-              "math_expression": "\\sqrt{3} \\cdot \\sqrt{12}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "fill_in_blank",
+              "instruction": "Cuidado con esta trampa. Completa el resultado de multiplicar estos dos irracionales.",
+              "math_expression": "\\sqrt{3} \\cdot \\sqrt{12} = \\sqrt{36} = [?]",
+              "correct_answer": "6",
+              "options": ["6", "15", "36"],
               "explanation": [
-                "A simple vista, estamos multiplicando dos números irracionales.",
-                "Sin embargo, por propiedades de las raíces, podemos unir la multiplicación bajo una sola raíz: √(3 * 12).",
-                "Esto nos da √36.",
-                "La raíz cuadrada de 36 es exactamente 6. Como 6 es un número entero, el resultado final es racional."
+                "A simple vista, multiplicas dos números irracionales.",
+                "Sin embargo, por propiedades de raíces, al unirlos bajo la misma raíz (3 * 12) obtenemos 36.",
+                "La raíz cuadrada de 36 es exactamente 6, un número entero (racional)."
               ]
             },
             {
               "exercise_id": "ex01_02_03",
-              "interaction_type": "multiple_choice",
-              "question": "Analiza el resultado de la siguiente operación:",
-              "math_expression": "0 \\cdot \\pi",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza el patrón de multiplicar por Pi (π). ¿Qué pasa en el último recuadro?",
+              "grid_data": [
+                { "cell": "2 \\cdot \\pi", "value": "Irracional" },
+                { "cell": "1 \\cdot \\pi", "value": "Irracional" },
+                { "cell": "0 \\cdot \\pi", "value": "[?]" }
               ],
+              "correct_answer": "Racional",
+              "options": ["Racional", "Irracional"],
               "explanation": [
-                "Sabemos que π (Pi) es uno de los números irracionales más famosos.",
-                "Pero la regla básica de la multiplicación nos dice que cualquier número multiplicado por cero, sin importar cuál sea, siempre es cero.",
-                "El número 0 es un entero y, por lo tanto, se clasifica como un número racional."
+                "Cualquier número irracional multiplicado por un racional diferente de cero, sigue siendo irracional.",
+                "Pero la regla básica nos dice que TODO número multiplicado por cero, es siempre cero.",
+                "Como 0 es un número entero, el resultado se vuelve Racional."
               ]
             },
             {
               "exercise_id": "ex01_02_04",
-              "interaction_type": "multiple_choice",
-              "question": "¿El cociente de esta división es racional o irracional?",
-              "math_expression": "\\frac{\\sqrt{8}}{\\sqrt{2}}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "equation_builder",
+              "instruction": "Resuelve esta división de irracionales armando la secuencia correcta.",
+              "math_expression": "\\frac{\\sqrt{18}}{\\sqrt{2}} = \\sqrt{[?]} = [?]",
+              "available_tiles": ["9", "3", "6", "18"],
+              "correct_sequence": ["9", "3"],
               "explanation": [
-                "Tenemos una división entre dos números irracionales.",
-                "Aplicando las propiedades de la radicación, podemos colocar toda la fracción dentro de una sola raíz: √(8 / 2).",
-                "La división 8 / 2 es igual a 4.",
-                "Nos queda √4, que es exactamente 2. Como 2 es un número entero, el resultado es racional."
+                "Por propiedades de radicación, puedes colocar toda la fracción dentro de una sola raíz: √(18 / 2).",
+                "18 dividido entre 2 es 9.",
+                "La raíz cuadrada de 9 es exactamente 3 (un número racional)."
               ]
             },
             {
               "exercise_id": "ex01_02_05",
-              "interaction_type": "multiple_choice",
-              "question": "Resuelve la siguiente resta y clasifica su resultado:",
-              "math_expression": "\\sqrt{5} - \\sqrt{5}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja la operación con el tipo de número que resulta",
+              "pairs": [
+                { "left": "\\sqrt{5} - \\sqrt{5}", "right": "Racional" },
+                { "left": "5 \\cdot \\sqrt{7}", "right": "Irracional" },
+                { "left": "\\sqrt{2} \\cdot \\sqrt{8}", "right": "Racional" },
+                { "left": "4 + \\pi", "right": "Irracional" }
               ],
               "explanation": [
-                "Estamos restando un número irracional (la raíz de 5) menos el mismo número irracional.",
-                "Cualquier número restado por sí mismo es igual a cero.",
-                "Como vimos antes, el 0 es un número entero y, por consecuencia, un número racional."
+                "Un irracional restado por sí mismo da 0 (Racional).",
+                "La multiplicación √2 * √8 da √16, que es exactamente 4 (Racional).",
+                "Las otras operaciones (5√7 y 4+π) conservan sus decimales infinitos, por lo que son irracionales."
               ]
             },
             {
               "exercise_id": "ex01_02_06",
-              "interaction_type": "multiple_choice",
-              "question": "Al multiplicar este racional con este irracional, ¿qué ocurre?",
-              "math_expression": "5 \\cdot \\sqrt{7}",
-              "correct_answer_id": "opt_b",
-              "options": [
-                { "id": "opt_a", "text": "Racional" },
-                { "id": "opt_b", "text": "Irracional" }
-              ],
+              "interaction_type": "number_line",
+              "instruction": "Resuelve la multiplicación y ubica el resultado en la recta.",
+              "math_expression": "\\sqrt{7} \\cdot \\sqrt{7} = [?]",
+              "correct_answer": 7,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
               "explanation": [
-                "Tenemos la multiplicación de un número racional distinto de cero (5) y un número irracional (raíz de 7).",
-                "Regla matemática: El producto de un racional (que no sea cero) y un irracional SIEMPRE resulta en un número irracional.",
-                "Los decimales infinitos y no periódicos de la raíz de 7 se mantienen en el resultado final, por lo que es irracional."
+                "Multiplicar una raíz cuadrada por sí misma es equivalente a elevar esa raíz al cuadrado.",
+                "La raíz cuadrada y la potencia al cuadrado se cancelan mutuamente.",
+                "El número 7 queda libre (es un número racional)."
               ]
             }
           ]
@@ -225,7 +205,7 @@
             {
               "exercise_id": "ex01_03_01",
               "interaction_type": "multiple_choice",
-              "question": "Evalúa la siguiente expresión. ¿A qué equivale?",
+              "instruction": "Traduce el exponente fraccionario y selecciona el resultado correcto",
               "math_expression": "9^{\\frac{1}{2}}",
               "correct_answer_id": "opt_a",
               "options": [
@@ -235,97 +215,82 @@
               ],
               "explanation": [
                 "Un exponente fraccionario es otra forma de escribir una raíz.",
-                "El denominador de la fracción (2) nos indica el índice de la raíz. Por lo tanto, un exponente de 1/2 equivale exactamente a la raíz cuadrada.",
+                "El denominador (2) indica que es una raíz cuadrada.",
                 "La raíz cuadrada de 9 es 3."
               ]
             },
             {
               "exercise_id": "ex01_03_02",
-              "interaction_type": "multiple_choice",
-              "question": "¿Cuál es el valor real de esta potencia?",
-              "math_expression": "8^{\\frac{1}{3}}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "2" },
-                { "id": "opt_b", "text": "\\frac{8}{3}" },
-                { "id": "opt_c", "text": "24" }
-              ],
+              "interaction_type": "fill_in_blank",
+              "instruction": "Un denominador de 3 significa raíz cúbica. Completa la ecuación.",
+              "math_expression": "8^{\\frac{1}{3}} = \\sqrt[3]{8} = [?]",
+              "correct_answer": "2",
+              "options": ["2", "4", "24"],
               "explanation": [
-                "Siguiendo la regla de los exponentes racionales, el denominador indica qué raíz debemos aplicar.",
-                "Un denominador de 3 significa que debemos calcular la raíz cúbica de la base.",
-                "El número que multiplicado por sí mismo tres veces (2 * 2 * 2) nos da 8, es el 2."
+                "El exponente 1/3 te pide buscar un número que multiplicado por sí mismo tres veces dé 8.",
+                "Ese número es 2, ya que 2 x 2 x 2 = 8."
               ]
             },
             {
               "exercise_id": "ex01_03_03",
-              "interaction_type": "multiple_choice",
-              "question": "Sube el nivel: Ahora el numerador no es 1. Resuelve la expresión:",
-              "math_expression": "4^{\\frac{3}{2}}",
-              "correct_answer_id": "opt_c",
-              "options": [
-                { "id": "opt_a", "text": "6" },
-                { "id": "opt_b", "text": "16" },
-                { "id": "opt_c", "text": "8" }
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza cómo crece el numerador en el exponente y descubre el último valor.",
+              "grid_data": [
+                { "cell": "4^{\\frac{1}{2}}", "value": "2" },
+                { "cell": "4^{\\frac{2}{2}}", "value": "4" },
+                { "cell": "4^{\\frac{3}{2}}", "value": "[?]" }
               ],
+              "correct_answer": "8",
+              "options": ["6", "8"],
               "explanation": [
-                "Aquí la fracción tiene dos partes clave: el denominador (2) es la raíz, y el numerador (3) es la potencia.",
-                "Paso 1: Aplicamos la raíz cuadrada (por el 2 abajo). La raíz cuadrada de 4 es 2.",
-                "Paso 2: Elevamos ese resultado a la potencia indicada (el 3 arriba).",
-                "Calculamos 2 al cubo (2^3), lo que nos da como resultado final 8."
+                "En 4^(3/2), el 2 de abajo saca la raíz cuadrada (que es 2).",
+                "El 3 de arriba eleva ese resultado al cubo.",
+                "2 al cubo (2 x 2 x 2) es 8."
               ]
             },
             {
               "exercise_id": "ex01_03_04",
-              "interaction_type": "multiple_choice",
-              "question": "¡Cuidado con el signo! Evalúa esta expresión:",
-              "math_expression": "(-27)^{\\frac{1}{3}}",
-              "correct_answer_id": "opt_b",
-              "options": [
-                { "id": "opt_a", "text": "3" },
-                { "id": "opt_b", "text": "-3" },
-                { "id": "opt_c", "text": "No es un número real" }
-              ],
+              "interaction_type": "equation_builder",
+              "instruction": "Trampa clásica: El exponente negativo INVIERTE la base. Arma la solución paso a paso.",
+              "math_expression": "16^{-\\frac{1}{2}} = \\frac{1}{[?]^{\\frac{1}{2}}} = \\frac{1}{[?]}",
+              "available_tiles": ["16", "8", "4", "2"],
+              "correct_sequence": ["16", "4"],
               "explanation": [
-                "El exponente 1/3 nos pide calcular la raíz cúbica de -27.",
-                "A diferencia de las raíces cuadradas, la raíz impar (como la cúbica) de un número negativo SÍ existe en los números reales.",
-                "Buscamos un número que multiplicado 3 veces dé -27: (-3) * (-3) * (-3) = -27.",
-                "El resultado es -3."
+                "El signo negativo invierte el número: 16 pasa a ser 1/16 y el exponente se vuelve positivo.",
+                "Luego, aplicas el exponente 1/2 (que es la raíz cuadrada) al 16.",
+                "La raíz cuadrada de 16 es 4, por lo que queda la fracción 1/4."
               ]
             },
             {
               "exercise_id": "ex01_03_05",
-              "interaction_type": "multiple_choice",
-              "question": "Trampa clásica de examen: ¿Qué haces con el exponente negativo?",
-              "math_expression": "16^{-\\frac{1}{2}}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "\\frac{1}{4}" },
-                { "id": "opt_b", "text": "-4" },
-                { "id": "opt_c", "text": "-8" }
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada exponente fraccionario con su forma equivalente en raíz",
+              "pairs": [
+                { "left": "x^{\\frac{1}{2}}", "right": "\\sqrt{x}" },
+                { "left": "x^{\\frac{1}{3}}", "right": "\\sqrt[3]{x}" },
+                { "left": "x^{\\frac{2}{3}}", "right": "\\sqrt[3]{x^2}" },
+                { "left": "x^{\\frac{3}{2}}", "right": "\\sqrt{x^3}" }
               ],
               "explanation": [
-                "Un signo negativo en el exponente NO vuelve negativo al número; su función es INVERTIR la base.",
-                "Paso 1: Invertimos la base para volver positivo el exponente. 16^(-1/2) se convierte en 1 / (16^(1/2)).",
-                "Paso 2: Resolvemos el exponente fraccionario. 16^(1/2) es la raíz cuadrada de 16, que es 4.",
-                "El resultado final es la fracción 1/4."
+                "Regla de oro: 'El de arriba va adentro, el de abajo va afuera'.",
+                "El numerador de la fracción es la potencia de la x, y el denominador es el índice de la raíz."
               ]
             },
             {
               "exercise_id": "ex01_03_06",
-              "interaction_type": "multiple_choice",
-              "question": "Traduce la siguiente raíz a su forma con exponente racional:",
-              "math_expression": "\\sqrt[5]{x^2}",
-              "correct_answer_id": "opt_a",
-              "options": [
-                { "id": "opt_a", "text": "x^{\\frac{2}{5}}" },
-                { "id": "opt_b", "text": "x^{\\frac{5}{2}}" },
-                { "id": "opt_c", "text": "x^{\\frac{1}{10}}" }
-              ],
+              "interaction_type": "number_line",
+              "instruction": "Calcula el valor del exponente fraccionario y ubícalo en la recta.",
+              "math_expression": "125^{\\frac{1}{3}} = [?]",
+              "correct_answer": 5,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
               "explanation": [
-                "Para convertir una raíz a un exponente fraccionario, usamos la regla 'El de adentro va arriba, el de afuera va abajo'.",
-                "El exponente de la variable (2) se convierte en el numerador de la fracción.",
-                "El índice de la raíz (5) se convierte en el denominador.",
-                "Por lo tanto, la expresión correcta es x elevado a la 2/5."
+                "El exponente 1/3 es lo mismo que sacar la raíz cúbica.",
+                "Buscamos un número que al multiplicarlo 3 veces nos dé 125.",
+                "5 x 5 x 5 = 125. Por lo tanto, la respuesta es 5."
               ]
             }
           ]
@@ -335,96 +300,95 @@
           "lesson_title": "Propiedades de los exponentes racionales",
           "exercises": [
             {
-          "exercise_id": "ex01_04_01",
-          "interaction_type": "multiple_choice",
-          "question": "Aplica la propiedad correcta para simplificar esta multiplicación:",
-          "math_expression": "x^{\\frac{1}{2}} \\cdot x^{\\frac{1}{3}}",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "x^{\\frac{1}{6}}" },
-            { "id": "opt_b", "text": "x^{\\frac{2}{5}}" },
-            { "id": "opt_c", "text": "x^{\\frac{5}{6}}" }
-          ],
-          "explanation": [
-            "Regla del producto: Cuando multiplicamos potencias con la misma base, mantenemos la base y SUMAMOS los exponentes.",
-            "Debemos sumar las fracciones: 1/2 + 1/3.",
-            "Buscamos el mínimo común múltiplo (6) para sumar: 3/6 + 2/6 = 5/6.",
-            "Por lo tanto, la base x queda elevada a la 5/6."
-          ]
-        },
-        {
-          "exercise_id": "ex01_04_02",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica la siguiente división de potencias:",
-          "math_expression": "\\frac{y^{\\frac{3}{4}}}{y^{\\frac{1}{4}}}",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "y^{\\frac{3}{16}}" },
-            { "id": "opt_b", "text": "y^{\\frac{1}{2}}" },
-            { "id": "opt_c", "text": "y" }
-          ],
-          "explanation": [
-            "Regla del cociente: Al dividir potencias con la misma base, mantenemos la base y RESTAMOS los exponentes (el de arriba menos el de abajo).",
-            "Restamos: 3/4 - 1/4 = 2/4.",
-            "Simplificamos la fracción 2/4 dividiendo entre 2 arriba y abajo, lo que nos da 1/2.",
-            "El resultado es y elevado a la 1/2 (que también equivale a la raíz cuadrada de y)."
-          ]
-        },
-        {
-          "exercise_id": "ex01_04_03",
-          "interaction_type": "multiple_choice",
-          "question": "Resuelve esta potencia de una potencia:",
-          "math_expression": "(m^{\\frac{2}{3}})^6",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "m^{\\frac{20}{3}}" },
-            { "id": "opt_b", "text": "m^{\\frac{8}{3}}" },
-            { "id": "opt_c", "text": "m^4" }
-          ],
-          "explanation": [
-            "Regla de la potencia de una potencia: Cuando una potencia está elevada a otro exponente, se MULTIPLICAN los exponentes.",
-            "Multiplicamos: (2/3) * 6.",
-            "Esto es igual a 12/3.",
-            "12 dividido entre 3 es exactamente 4, por lo que el resultado es m elevado a la 4."
-          ]
-        },
-        {
-          "exercise_id": "ex01_04_04",
-          "interaction_type": "multiple_choice",
-          "question": "¡Atención a toda la base! Simplifica la siguiente expresión:",
-          "math_expression": "(16x^4)^{\\frac{1}{4}}",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "2x" },
-            { "id": "opt_b", "text": "16x" },
-            { "id": "opt_c", "text": "4x" }
-          ],
-          "explanation": [
-            "El exponente fraccionario afecta a TODO lo que está dentro del paréntesis, tanto al número como a la variable.",
-            "Paso 1: Aplicamos el exponente a 16. 16^(1/4) es la raíz cuarta de 16, que es 2.",
-            "Paso 2: Aplicamos el exponente a x^4. Se multiplican los exponentes: 4 * (1/4) = 4/4 = 1.",
-            "Uniendo ambas partes, obtenemos 2x^1, que simplemente se escribe como 2x."
-          ]
-        },
-        {
-          "exercise_id": "ex01_04_05",
-          "interaction_type": "multiple_choice",
-          "question": "Trampa de admisión: Combina fracciones y exponentes negativos.",
-          "math_expression": "\\left(\\frac{8}{27}\\right)^{-\\frac{1}{3}}",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "-\\frac{2}{3}" },
-            { "id": "opt_b", "text": "\\frac{3}{2}" },
-            { "id": "opt_c", "text": "\\frac{2}{3}" }
-          ],
-          "explanation": [
-            "Paso 1: El signo negativo en el exponente INVIERTE la fracción base. (8/27)^(-1/3) se convierte en (27/8)^(1/3).",
-            "Paso 2: El exponente 1/3 equivale a sacar la raíz cúbica tanto al numerador como al denominador.",
-            "La raíz cúbica de 27 es 3.",
-            "La raíz cúbica de 8 es 2.",
-            "El resultado final es la fracción 3/2."
-          ]
-        }
+              "exercise_id": "ex01_04_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Aplica la propiedad correcta para simplificar esta multiplicación",
+              "math_expression": "x^{\\frac{1}{2}} \\cdot x^{\\frac{1}{3}}",
+              "correct_answer_id": "opt_c",
+              "options": [
+                { "id": "opt_a", "text": "x^{\\frac{1}{6}}" },
+                { "id": "opt_b", "text": "x^{\\frac{2}{5}}" },
+                { "id": "opt_c", "text": "x^{\\frac{5}{6}}" }
+              ],
+              "explanation": [
+                "Regla del producto: Cuando multiplicamos potencias con la misma base, SUMAMOS los exponentes.",
+                "Sumamos las fracciones buscando el mínimo común múltiplo (6): 3/6 + 2/6 = 5/6."
+              ]
+            },
+            {
+              "exercise_id": "ex01_04_02",
+              "interaction_type": "fill_in_blank",
+              "instruction": "En una división de bases iguales, los exponentes se restan. Completa el numerador.",
+              "math_expression": "\\frac{y^{\\frac{3}{4}}}{y^{\\frac{1}{4}}} = y^{\\frac{3}{4} - \\frac{1}{4}} = y^{\\frac{[?]}{4}}",
+              "correct_answer": "2",
+              "options": ["1", "2", "4"],
+              "explanation": [
+                "Como tienen el mismo denominador (4), solo restamos los numeradores: 3 - 1 = 2.",
+                "El exponente resultante es 2/4, que luego puedes simplificar a 1/2."
+              ]
+            },
+            {
+              "exercise_id": "ex01_04_03",
+              "interaction_type": "number_line",
+              "instruction": "Potencia de una potencia: MULTIPLICA los exponentes. Ubica el exponente final en la recta.",
+              "math_expression": "(m^{\\frac{2}{3}})^6 = m^{[?]}",
+              "correct_answer": 4,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
+              "explanation": [
+                "Multiplicamos las dos potencias: (2/3) * 6.",
+                "Esto es igual a 12 / 3.",
+                "12 dividido entre 3 nos da exactamente 4."
+              ]
+            },
+            {
+              "exercise_id": "ex01_04_04",
+              "interaction_type": "equation_builder",
+              "instruction": "El exponente afecta a TODO lo que está en el paréntesis. Arma la respuesta.",
+              "math_expression": "(16x^4)^{\\frac{1}{4}} = [?]x^{[?]}",
+              "available_tiles": ["2", "1", "16", "4", "x"],
+              "correct_sequence": ["2", "1"],
+              "explanation": [
+                "Primero aplicamos el exponente a 16: La raíz cuarta de 16 es 2.",
+                "Luego lo aplicamos a x^4: Multiplicamos los exponentes (4 * 1/4 = 1). Así que queda x^1.",
+                "El resultado final es 2x^1."
+              ]
+            },
+            {
+              "exercise_id": "ex01_04_05",
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada operación con la regla que debes aplicar a sus exponentes",
+              "pairs": [
+                { "left": "x^a \\cdot x^b", "right": "Suma: a + b" },
+                { "left": "\\frac{x^a}{x^b}", "right": "Resta: a - b" },
+                { "left": "(x^a)^b", "right": "Multiplica: a \\cdot b" },
+                { "left": "x^{-a}", "right": "Invierte la base" }
+              ],
+              "explanation": [
+                "Memorizar estas 4 reglas de oro te salvará en cualquier examen de admisión.",
+                "Multiplicación suma, división resta, paréntesis multiplica, y el negativo invierte."
+              ]
+            },
+            {
+              "exercise_id": "ex01_04_06",
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza cómo el signo negativo invierte la fracción. ¿Cuál es el numerador final?",
+              "grid_data": [
+                { "cell": "\\left(\\frac{8}{27}\\right)^{-\\frac{1}{3}}", "value": "\\left(\\frac{27}{8}\\right)^{\\frac{1}{3}}" },
+                { "cell": "\\left(\\frac{27}{8}\\right)^{\\frac{1}{3}}", "value": "\\frac{\\sqrt[3]{27}}{\\sqrt[3]{8}}" },
+                { "cell": "\\frac{\\sqrt[3]{27}}{\\sqrt[3]{8}}", "value": "\\frac{[?]}{2}" }
+              ],
+              "correct_answer": "3",
+              "options": ["3", "9", "27"],
+              "explanation": [
+                "Paso 1: El exponente negativo invirtió 8/27 y lo convirtió en 27/8.",
+                "Paso 2: El exponente 1/3 se transformó en raíz cúbica arriba y abajo.",
+                "La raíz cúbica de 27 es 3. (Porque 3 * 3 * 3 = 27)."
+              ]
+            }
           ]
         },
         {
@@ -432,94 +396,94 @@
           "lesson_title": "Evaluar expresiones con coeficientes fraccionarios",
           "exercises": [
             {
-          "exercise_id": "ex01_05_01",
-          "interaction_type": "multiple_choice",
-          "question": "Evalúa la siguiente expresión cuando x = 12:",
-          "math_expression": "\\frac{2}{3}x - 4",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "8" },
-            { "id": "opt_b", "text": "12" },
-            { "id": "opt_c", "text": "4" }
-          ],
-          "explanation": [
-            "Paso 1: Sustituimos el valor de x por 12 en la expresión.",
-            "Paso 2: Multiplicamos la fracción por el entero: (2 * 12) / 3 = 24 / 3 = 8.",
-            "Paso 3: Restamos el 4 final. 8 - 4 = 4."
-          ]
-        },
-        {
-          "exercise_id": "ex01_05_02",
-          "interaction_type": "multiple_choice",
-          "question": "¡Cuidado con la potencia! Evalúa la expresión cuando y = 4:",
-          "math_expression": "\\frac{1}{2}y^2 + 5",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "9" },
-            { "id": "opt_b", "text": "13" },
-            { "id": "opt_c", "text": "21" }
-          ],
-          "explanation": [
-            "Por jerarquía de operaciones, primero resolvemos la potencia y LUEGO multiplicamos por la fracción.",
-            "Paso 1: Elevamos 4 al cuadrado (4^2 = 16).",
-            "Paso 2: Multiplicamos por la fracción: (1/2) * 16 = 8.",
-            "Paso 3: Sumamos 5 al resultado. 8 + 5 = 13."
-          ]
-        },
-        {
-          "exercise_id": "ex01_05_03",
-          "interaction_type": "multiple_choice",
-          "question": "Evalúa esta expresión con dos variables, sabiendo que a = 8 y b = 10:",
-          "math_expression": "\\frac{3}{4}a - \\frac{1}{5}b",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "4" },
-            { "id": "opt_b", "text": "8" },
-            { "id": "opt_c", "text": "2" }
-          ],
-          "explanation": [
-            "Sustituimos ambas variables al mismo tiempo y resolvemos por partes.",
-            "Parte 1: (3/4) * 8 = 24 / 4 = 6.",
-            "Parte 2: (1/5) * 10 = 10 / 5 = 2.",
-            "Restamos ambos resultados: 6 - 2 = 4."
-          ]
-        },
-        {
-          "exercise_id": "ex01_05_04",
-          "interaction_type": "multiple_choice",
-          "question": "Trampa de signos. Evalúa la expresión cuando m = -4:",
-          "math_expression": "-\\frac{5}{2}m + 1",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "-9" },
-            { "id": "opt_b", "text": "9" },
-            { "id": "opt_c", "text": "11" }
-          ],
-          "explanation": [
-            "Paso 1: Sustituimos m por -4. Queda: (-5/2) * (-4) + 1.",
-            "Paso 2: Ley de signos de la multiplicación: menos por menos da más.",
-            "Paso 3: Multiplicamos: (5 * 4) / 2 = 20 / 2 = 10.",
-            "Paso 4: Sumamos el 1 restante. 10 + 1 = 11."
-          ]
-        },
-        {
-          "exercise_id": "ex01_05_05",
-          "interaction_type": "multiple_choice",
-          "question": "Nivel Cachimbo. Evalúa la expresión si x = 5:",
-          "math_expression": "\\frac{2}{5}x^3",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "10" },
-            { "id": "opt_b", "text": "50" },
-            { "id": "opt_c", "text": "250" }
-          ],
-          "explanation": [
-            "Paso 1: Jerarquía de operaciones manda resolver primero el exponente. 5 al cubo es 5 * 5 * 5 = 125.",
-            "Paso 2: Ahora multiplicamos por la fracción: (2/5) * 125.",
-            "Truco para ser más rápido: en vez de multiplicar 2 * 125, primero divide 125 entre 5 (que es 25) y luego multiplícalo por 2.",
-            "25 * 2 = 50."
-          ]
-        }
+              "exercise_id": "ex01_05_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Evalúa la siguiente expresión cuando x = 12",
+              "math_expression": "\\frac{2}{3}x - 4",
+              "correct_answer_id": "opt_c",
+              "options": [
+                { "id": "opt_a", "text": "8" },
+                { "id": "opt_b", "text": "12" },
+                { "id": "opt_c", "text": "4" }
+              ],
+              "explanation": [
+                "Paso 1: Sustituimos la x por 12. Multiplicamos (2 * 12) / 3 = 24 / 3 = 8.",
+                "Paso 2: Restamos el 4 final. 8 - 4 = 4."
+              ]
+            },
+            {
+              "exercise_id": "ex01_05_02",
+              "interaction_type": "fill_in_blank",
+              "instruction": "Jerarquía de operaciones: ¡Primero la potencia! Evalúa cuando y = 4.",
+              "math_expression": "\\frac{1}{2}(4)^2 + 5 = \\frac{1}{2}(16) + 5 = [?] + 5",
+              "correct_answer": "8",
+              "options": ["4", "8", "16"],
+              "explanation": [
+                "Primero elevamos 4 al cuadrado, lo que da 16.",
+                "Luego lo multiplicamos por la fracción 1/2 (que es lo mismo que sacarle la mitad). La mitad de 16 es 8."
+              ]
+            },
+            {
+              "exercise_id": "ex01_05_03",
+              "interaction_type": "pattern_grid",
+              "instruction": "Descubre el patrón al evaluar la expresión (3/4)x con diferentes valores de x.",
+              "grid_data": [
+                { "cell": "x = 4", "value": "3" },
+                { "cell": "x = 8", "value": "6" },
+                { "cell": "x = 12", "value": "[?]" }
+              ],
+              "correct_answer": "9",
+              "options": ["9", "12"],
+              "explanation": [
+                "Al multiplicar por 3/4, divides entre 4 y multiplicas por 3.",
+                "Para x = 12: 12 / 4 = 3. Luego 3 * 3 = 9."
+              ]
+            },
+            {
+              "exercise_id": "ex01_05_04",
+              "interaction_type": "equation_builder",
+              "instruction": "Evalúa con dos variables: a = 8 y b = 10. Arma la resta final.",
+              "math_expression": "\\frac{3}{4}(8) - \\frac{1}{5}(10) = [?] - [?]",
+              "available_tiles": ["2", "4", "6", "8"],
+              "correct_sequence": ["6", "2"],
+              "explanation": [
+                "Parte 1: (3/4) * 8 es igual a 6.",
+                "Parte 2: (1/5) * 10 es igual a 2.",
+                "La ecuación final queda como 6 - 2."
+              ]
+            },
+            {
+              "exercise_id": "ex01_05_05",
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada valor de 'x' con el resultado de evaluar la expresión: x/5 + 2",
+              "pairs": [
+                { "left": "x = 5", "right": "3" },
+                { "left": "x = 10", "right": "4" },
+                { "left": "x = 15", "right": "5" },
+                { "left": "x = -10", "right": "0" }
+              ],
+              "explanation": [
+                "Para evaluar x/5 + 2, primero divides el número entre 5 y luego le sumas 2.",
+                "Ejemplo con -10: -10/5 = -2. Luego -2 + 2 = 0."
+              ]
+            },
+            {
+              "exercise_id": "ex01_05_06",
+              "interaction_type": "number_line",
+              "instruction": "Trampa de signos. Evalúa cuando m = -4 y ubica el resultado.",
+              "math_expression": "-\\frac{5}{2}(-4) + 1 = [?]",
+              "correct_answer": 11,
+              "line_config": {
+                "min": 0,
+                "max": 15,
+                "step": 1
+              },
+              "explanation": [
+                "Ley de signos: menos por menos da más. (-5/2) * (-4) se vuelve positivo.",
+                "Multiplicamos: (5 * 4) / 2 = 20 / 2 = 10.",
+                "Le sumamos 1 al final. 10 + 1 = 11."
+              ]
+            }
           ]
         },
         {
@@ -527,96 +491,95 @@
           "lesson_title": "Simplificar raíces cuadradas",
           "exercises": [
             {
-          "exercise_id": "ex01_06_01",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica la siguiente raíz cuadrada extrayendo factores:",
-          "math_expression": "\\sqrt{18}",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "9\\sqrt{2}" },
-            { "id": "opt_b", "text": "3\\sqrt{2}" },
-            { "id": "opt_c", "text": "6\\sqrt{3}" }
-          ],
-          "explanation": [
-            "Paso 1: Descomponemos 18 buscando un factor que sea un 'cuadrado perfecto' (números que tienen raíz exacta como 4, 9, 16, 25...).",
-            "Sabemos que 18 = 9 * 2.",
-            "Paso 2: Separamos las raíces: √9 * √2.",
-            "La raíz cuadrada de 9 es exactamente 3, por lo que el 3 'escapa' de la raíz.",
-            "El 2 se queda adentro. El resultado final es 3√2."
-          ]
-        },
-        {
-          "exercise_id": "ex01_06_02",
-          "interaction_type": "multiple_choice",
-          "question": "Un clásico de examen de admisión. Simplifica al máximo:",
-          "math_expression": "\\sqrt{75}",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "5\\sqrt{3}" },
-            { "id": "opt_b", "text": "3\\sqrt{5}" },
-            { "id": "opt_c", "text": "15\\sqrt{5}" }
-          ],
-          "explanation": [
-            "Buscamos el cuadrado perfecto más grande que divida a 75.",
-            "75 se puede reescribir como 25 * 3.",
-            "Extraemos la raíz cuadrada de 25, que es 5 exacto.",
-            "Ese 5 sale a multiplicar, y el 3 se queda atrapado. El resultado es 5√3."
-          ]
-        },
-        {
-          "exercise_id": "ex01_06_03",
-          "interaction_type": "multiple_choice",
-          "question": "¡No olvides el número de afuera! Simplifica:",
-          "math_expression": "4\\sqrt{50}",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "4\\sqrt{2}" },
-            { "id": "opt_b", "text": "10\\sqrt{2}" },
-            { "id": "opt_c", "text": "20\\sqrt{2}" }
-          ],
-          "explanation": [
-            "Primero nos enfocamos en la raíz de 50. Descomponemos 50 como 25 * 2.",
-            "La raíz de 25 es 5. Este 5 sale de la raíz.",
-            "Al salir, se encuentra con el 4 que ya estaba afuera esperando. Se deben multiplicar: 4 * 5 = 20.",
-            "El 2 se queda dentro de la raíz. Resultado final: 20√2."
-          ]
-        },
-        {
-          "exercise_id": "ex01_06_04",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica la raíz cuando hay variables involucradas:",
-          "math_expression": "\\sqrt{x^5}",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "x^2\\sqrt{x}" },
-            { "id": "opt_b", "text": "x\\sqrt{x^3}" },
-            { "id": "opt_c", "text": "x^5" }
-          ],
-          "explanation": [
-            "Para sacar variables de una raíz cuadrada, necesitamos exponentes pares.",
-            "Como 5 es impar, separamos x^5 en (x^4 * x^1).",
-            "La raíz cuadrada divide a los exponentes entre 2. La raíz de x^4 es x^2, por lo que x^2 sale libre de la raíz.",
-            "El x^1 sobrante no puede salir y se queda adentro. Nos queda x^2√x."
-          ]
-        },
-        {
-          "exercise_id": "ex01_06_05",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica la siguiente fracción dentro de una raíz:",
-          "math_expression": "\\sqrt{\\frac{27}{16}}",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "\\frac{9\\sqrt{3}}{4}" },
-            { "id": "opt_b", "text": "\\frac{3\\sqrt{3}}{4}" },
-            { "id": "opt_c", "text": "\\frac{3\\sqrt{3}}{8}" }
-          ],
-          "explanation": [
-            "Por propiedad de raíces, podemos separar la raíz arriba y abajo: √27 / √16.",
-            "Abajo es fácil: la raíz cuadrada de 16 es exactamente 4. Ya no hay raíz en el denominador.",
-            "Arriba, simplificamos √27. Como 27 es 9 * 3, la raíz de 9 sale como 3, y queda un 3 adentro: 3√3.",
-            "Juntando todo de nuevo, obtenemos la fracción (3√3) / 4."
-          ]
-        }
+              "exercise_id": "ex01_06_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Simplifica la siguiente raíz cuadrada extrayendo factores",
+              "math_expression": "\\sqrt{18}",
+              "correct_answer_id": "opt_b",
+              "options": [
+                { "id": "opt_a", "text": "9\\sqrt{2}" },
+                { "id": "opt_b", "text": "3\\sqrt{2}" },
+                { "id": "opt_c", "text": "6\\sqrt{3}" }
+              ],
+              "explanation": [
+                "Descomponemos 18 buscando un cuadrado perfecto (como 4, 9, 16...).",
+                "18 = 9 * 2.",
+                "La raíz cuadrada de 9 es 3, así que el 3 'escapa' de la raíz. El 2 se queda adentro."
+              ]
+            },
+            {
+              "exercise_id": "ex01_06_02",
+              "interaction_type": "equation_builder",
+              "instruction": "Un clásico de examen. Extrae el cuadrado perfecto de 75 armando la respuesta.",
+              "math_expression": "\\sqrt{75} = \\sqrt{25 \\cdot 3} = [?] \\sqrt{[?]}",
+              "available_tiles": ["3", "5", "15", "25"],
+              "correct_sequence": ["5", "3"],
+              "explanation": [
+                "75 se puede reescribir como 25 * 3.",
+                "Extraemos la raíz cuadrada de 25, que es exactamente 5.",
+                "Ese 5 sale a multiplicar, y el 3 se queda atrapado."
+              ]
+            },
+            {
+              "exercise_id": "ex01_06_03",
+              "interaction_type": "pattern_grid",
+              "instruction": "¡No olvides el número de afuera! Analiza el patrón y descubre el coeficiente final.",
+              "grid_data": [
+                { "cell": "\\sqrt{8}", "value": "2\\sqrt{2}" },
+                { "cell": "3\\sqrt{8}", "value": "6\\sqrt{2}" },
+                { "cell": "4\\sqrt{50}", "value": "[?]\\sqrt{2}" }
+              ],
+              "correct_answer": "20",
+              "options": ["10", "20", "40"],
+              "explanation": [
+                "Primero simplificamos la raíz: 50 es 25 * 2. La raíz de 25 es 5, que sale.",
+                "Al salir, se encuentra con el 4 que ya estaba afuera. Se multiplican: 4 * 5 = 20."
+              ]
+            },
+            {
+              "exercise_id": "ex01_06_04",
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada raíz con variables con su forma simplificada",
+              "pairs": [
+                { "left": "\\sqrt{x^2}", "right": "x" },
+                { "left": "\\sqrt{x^3}", "right": "x\\sqrt{x}" },
+                { "left": "\\sqrt{x^4}", "right": "x^2" },
+                { "left": "\\sqrt{x^5}", "right": "x^2\\sqrt{x}" }
+              ],
+              "explanation": [
+                "Para sacar variables de una raíz cuadrada, divides su exponente entre 2.",
+                "Si el exponente es impar (como 5), separas en par e impar (x^4 * x). La parte par sale y la x sobra adentro."
+              ]
+            },
+            {
+              "exercise_id": "ex01_06_05",
+              "interaction_type": "fill_in_blank",
+              "instruction": "Simplifica la fracción separando la raíz arriba y abajo. Completa el denominador.",
+              "math_expression": "\\sqrt{\\frac{27}{16}} = \\frac{\\sqrt{9 \\cdot 3}}{\\sqrt{16}} = \\frac{3\\sqrt{3}}{[?]}",
+              "correct_answer": "4",
+              "options": ["4", "8", "16"],
+              "explanation": [
+                "Abajo: la raíz cuadrada de 16 es exactamente 4. Ya no hay raíz en el denominador.",
+                "Arriba: la raíz de 27 se simplifica a 3√3."
+              ]
+            },
+            {
+              "exercise_id": "ex01_06_06",
+              "interaction_type": "number_line",
+              "instruction": "Simplifica la raíz a la forma 'a√2'. ¿Cuál es el valor del número 'a' que va afuera?",
+              "math_expression": "\\sqrt{32} = [?] \\sqrt{2}",
+              "correct_answer": 4,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
+              "explanation": [
+                "Buscamos el cuadrado perfecto más grande dentro de 32, que es 16 (16 * 2).",
+                "La raíz cuadrada de 16 es 4.",
+                "El 4 sale de la raíz y el 2 se queda adentro."
+              ]
+            }
           ]
         },
         {
@@ -624,95 +587,98 @@
           "lesson_title": "Simplificar raíces de otros órdenes",
           "exercises": [
             {
-          "exercise_id": "ex01_07_01",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica la siguiente raíz cúbica extrayendo factores:",
-          "math_expression": "\\sqrt[3]{24}",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "2\\sqrt[3]{3}" },
-            { "id": "opt_b", "text": "3\\sqrt[3]{2}" },
-            { "id": "opt_c", "text": "8\\sqrt[3]{3}" }
-          ],
-          "explanation": [
-            "Para simplificar raíces cúbicas, no buscamos cuadrados, sino 'cubos perfectos' (números como 8, 27, 64...).",
-            "Descomponemos 24 en 8 * 3.",
-            "La raíz cúbica de 8 es exactamente 2, por lo que el 2 sale de la raíz.",
-            "El 3 se queda atrapado. El resultado final es 2 multiplicando a la raíz cúbica de 3."
-          ]
-        },
-        {
-          "exercise_id": "ex01_07_02",
-          "interaction_type": "multiple_choice",
-          "question": "Cuidado con los signos en índices impares. Simplifica:",
-          "math_expression": "\\sqrt[3]{-54}",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "No es un número real" },
-            { "id": "opt_b", "text": "-9\\sqrt[3]{6}" },
-            { "id": "opt_c", "text": "-3\\sqrt[3]{2}" }
-          ],
-          "explanation": [
-            "Las raíces de índice impar (como 3) de números negativos SÍ existen. El resultado será negativo.",
-            "Buscamos un cubo perfecto negativo que divida a -54. Usamos -27 * 2.",
-            "La raíz cúbica de -27 es -3 (porque -3 * -3 * -3 = -27). Este -3 sale de la raíz.",
-            "El 2 se queda dentro. El resultado es -3 multiplicando a la raíz cúbica de 2."
-          ]
-        },
-        {
-          "exercise_id": "ex01_07_03",
-          "interaction_type": "multiple_choice",
-          "question": "Sube el nivel: Simplifica una raíz cuarta.",
-          "math_expression": "\\sqrt[4]{32}",
-          "correct_answer_id": "opt_b",
-          "options": [
-            { "id": "opt_a", "text": "4\\sqrt[4]{2}" },
-            { "id": "opt_b", "text": "2\\sqrt[4]{2}" },
-            { "id": "opt_c", "text": "2\\sqrt{2}" }
-          ],
-          "explanation": [
-            "Ahora buscamos un número elevado a la 4 (como 16, 81, 256...).",
-            "Descomponemos 32 como 16 * 2.",
-            "La raíz cuarta de 16 es 2 (porque 2 * 2 * 2 * 2 = 16). Este 2 logra escapar de la raíz.",
-            "El otro 2 se queda adentro. Obtenemos 2 multiplicando a la raíz cuarta de 2."
-          ]
-        },
-        {
-          "exercise_id": "ex01_07_04",
-          "interaction_type": "multiple_choice",
-          "question": "Simplifica raíces de índice mayor con variables:",
-          "math_expression": "\\sqrt[3]{x^8}",
-          "correct_answer_id": "opt_a",
-          "options": [
-            { "id": "opt_a", "text": "x^2\\sqrt[3]{x^2}" },
-            { "id": "opt_b", "text": "x^2\\sqrt[3]{x}" },
-            { "id": "opt_c", "text": "x^3\\sqrt[3]{x^2}" }
-          ],
-          "explanation": [
-            "Para sacar variables, necesitamos que su exponente sea divisible entre el índice de la raíz (3).",
-            "Separamos x^8 en x^6 * x^2 (porque 6 es el múltiplo de 3 más cercano sin pasarse).",
-            "Sacamos la raíz cúbica de x^6 dividiendo el exponente: 6 / 3 = 2. Así que sale x^2.",
-            "El x^2 sobrante se queda adentro. Resultado: x^2 multiplicando a la raíz cúbica de x^2."
-          ]
-        },
-        {
-          "exercise_id": "ex01_07_05",
-          "interaction_type": "multiple_choice",
-          "question": "Combina fracciones con raíces de otros órdenes:",
-          "math_expression": "\\sqrt[3]{\\frac{16}{27}}",
-          "correct_answer_id": "opt_c",
-          "options": [
-            { "id": "opt_a", "text": "\\frac{4\\sqrt[3]{2}}{9}" },
-            { "id": "opt_b", "text": "\\frac{2\\sqrt[3]{4}}{3}" },
-            { "id": "opt_c", "text": "\\frac{2\\sqrt[3]{2}}{3}" }
-          ],
-          "explanation": [
-            "Separamos la raíz cúbica arriba y abajo.",
-            "En el denominador: La raíz cúbica de 27 es exactamente 3. Ya no hay raíz abajo.",
-            "En el numerador: Simplificamos la raíz cúbica de 16. Sabemos que 16 es 8 * 2. La raíz cúbica de 8 es 2, así que nos queda 2 multiplicando a la raíz cúbica de 2.",
-            "Juntando ambas partes, el resultado es la fracción (2∛2) / 3."
-          ]
-        }
+              "exercise_id": "ex01_07_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Simplifica la siguiente raíz cúbica extrayendo factores",
+              "math_expression": "\\sqrt[3]{24}",
+              "correct_answer_id": "opt_a",
+              "options": [
+                { "id": "opt_a", "text": "2\\sqrt[3]{3}" },
+                { "id": "opt_b", "text": "3\\sqrt[3]{2}" },
+                { "id": "opt_c", "text": "8\\sqrt[3]{3}" }
+              ],
+              "explanation": [
+                "Para simplificar raíces cúbicas, no buscamos cuadrados, sino 'cubos perfectos' (como 8, 27, 64...).",
+                "Descomponemos 24 en 8 * 3.",
+                "La raíz cúbica de 8 es exactamente 2, por lo que el 2 sale de la raíz. El 3 se queda adentro."
+              ]
+            },
+            {
+              "exercise_id": "ex01_07_02",
+              "interaction_type": "fill_in_blank",
+              "instruction": "Cuidado con los signos. Completa el número que logra escapar de esta raíz cúbica negativa.",
+              "math_expression": "\\sqrt[3]{-54} = \\sqrt[3]{-27 \\cdot 2} = [?] \\sqrt[3]{2}",
+              "correct_answer": "-3",
+              "options": ["-3", "3", "-9"],
+              "explanation": [
+                "Las raíces de índice impar (como 3) de números negativos SÍ existen y el resultado es negativo.",
+                "Usamos el cubo perfecto -27. La raíz cúbica de -27 es -3 (porque -3 * -3 * -3 = -27).",
+                "El -3 sale y el 2 se queda atrapado."
+              ]
+            },
+            {
+              "exercise_id": "ex01_07_03",
+              "interaction_type": "number_line",
+              "instruction": "Sube el nivel a una raíz cuarta. ¿Qué número va afuera de la raíz?",
+              "math_expression": "\\sqrt[4]{32} = [?] \\sqrt[4]{2}",
+              "correct_answer": 2,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
+              "explanation": [
+                "Buscamos un número elevado a la 4 (como 16, 81, 256...).",
+                "Descomponemos 32 como 16 * 2.",
+                "La raíz cuarta de 16 es 2 (porque 2 * 2 * 2 * 2 = 16). Ese 2 es el que logra escapar."
+              ]
+            },
+            {
+              "exercise_id": "ex01_07_04",
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada raíz cúbica de variables con su simplificación correcta",
+              "pairs": [
+                { "left": "\\sqrt[3]{x^3}", "right": "x" },
+                { "left": "\\sqrt[3]{x^4}", "right": "x\\sqrt[3]{x}" },
+                { "left": "\\sqrt[3]{x^6}", "right": "x^2" },
+                { "left": "\\sqrt[3]{x^8}", "right": "x^2\\sqrt[3]{x^2}" }
+              ],
+              "explanation": [
+                "Para sacar variables de una raíz cúbica, divides su exponente entre 3.",
+                "Si no es múltiplo exacto (como 8), separas en el múltiplo más cercano (x^6 * x^2).",
+                "6/3 es 2, así que sale x^2, y adentro sobran x^2."
+              ]
+            },
+            {
+              "exercise_id": "ex01_07_05",
+              "interaction_type": "equation_builder",
+              "instruction": "Combina fracciones con raíces cúbicas. Arma el resultado final.",
+              "math_expression": "\\sqrt[3]{\\frac{16}{27}} = \\frac{[?]\\sqrt[3]{2}}{[?]}",
+              "available_tiles": ["4", "2", "3", "9"],
+              "correct_sequence": ["2", "3"],
+              "explanation": [
+                "En el denominador: La raíz cúbica de 27 es exactamente 3.",
+                "En el numerador: Simplificamos la raíz de 16. Sabemos que 16 es 8 * 2. La raíz cúbica de 8 es 2, así que nos queda 2∛2.",
+                "Unimos todo: (2∛2) / 3."
+              ]
+            },
+            {
+              "exercise_id": "ex01_07_06",
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza cómo el índice de la raíz (el número chiquito) cambia todo. Completa el último cuadro.",
+              "grid_data": [
+                { "cell": "\\sqrt{16}", "value": "4" },
+                { "cell": "\\sqrt[4]{16}", "value": "2" },
+                { "cell": "\\sqrt[3]{16}", "value": "[?]\\sqrt[3]{2}" }
+              ],
+              "correct_answer": "2",
+              "options": ["2", "4", "8"],
+              "explanation": [
+                "16 tiene raíz cuadrada exacta (4) y raíz cuarta exacta (2).",
+                "Pero NO tiene raíz cúbica exacta. Lo separamos en 8 * 2.",
+                "La raíz cúbica de 8 es 2, el cual sale de la raíz y deja al otro 2 adentro."
+              ]
+            }
           ]
         }
       ]
