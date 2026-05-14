@@ -801,23 +801,326 @@
         },
         {
           "lesson_id": "l02_02",
-          "lesson_title": "TÍTULO DE LECCIÓN AQUÍ",
-          "exercises": []
+          "lesson_title": "Problemas verbales con notación científica",
+          "exercises": [
+            {
+              "exercise_id": "ex02_02_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Un rayo de luz viaja a $3 \\times 10^5$ km/s. Si la luz del Sol tarda $5 \\times 10^2$ segundos en llegar a la Tierra, ¿cuál es la distancia total?",
+              "math_expression": "d = v \\cdot t = (3 \\times 10^5) \\cdot (5 \\times 10^2)",
+              "correct_answer_id": "opt_c",
+              "options": [
+                { "id": "opt_a", "text": "8 \\times 10^7 \\text{ km}" },
+                { "id": "opt_b", "text": "15 \\times 10^{10} \\text{ km}" },
+                { "id": "opt_c", "text": "1.5 \\times 10^8 \\text{ km}" }
+              ],
+              "explanation": [
+                "Para resolver problemas de distancia, velocidad y tiempo (MRU), usamos la fórmula: Distancia = Velocidad × Tiempo.",
+                "Paso 1: Agrupamos los coeficientes. Multiplicamos 3 por 5, lo que nos da 15.",
+                "Paso 2: Agrupamos las potencias de 10. Al multiplicar bases iguales, SUMAMOS los exponentes: 5 + 2 = 7. Hasta aquí tenemos 15 x 10^7.",
+                "Paso 3 (La trampa del examen): El coeficiente '15' no es válido en notación científica pura porque es mayor a 10. Debemos ajustarlo.",
+                "Movemos la coma un espacio a la izquierda para convertir el 15 en 1.5. Como hicimos el número más pequeño, le sumamos +1 al exponente.",
+                "El exponente 7 se convierte en 8. La distancia oficial de la Tierra al Sol es 1.5 x 10^8 kilómetros."
+              ]
+            },
+            {
+              "exercise_id": "ex02_02_02",
+              "interaction_type": "fill_in_blank",
+              "instruction": "Una sola gota de sangre contiene aproximadamente $5 \\times 10^6$ glóbulos rojos. ¿Cuántos glóbulos habrá en $2 \\times 10^3$ gotas? Completa el exponente final ajustado.",
+              "math_expression": "(5 \\times 10^6) \\cdot (2 \\times 10^3) = 10 \\times 10^9 = 1 \\times 10^{[?]}",
+              "correct_answer": "10",
+              "options": ["9", "10", "18"],
+              "explanation": [
+                "Este es un problema clásico de multiplicación por lotes. Multiplicamos la cantidad por unidad (glóbulos por gota) por el total de unidades (gotas).",
+                "Paso 1: Multiplicamos los coeficientes: 5 x 2 = 10.",
+                "Paso 2: Sumamos los exponentes de las bases 10: 6 + 3 = 9. El resultado temporal es 10 x 10^9.",
+                "Paso 3 (Ajuste obligatorio): La notación científica exige un coeficiente entre 1 y 9.99. El número '10' está en el límite y debe ajustarse a '1.0'.",
+                "Al mover la coma una posición a la izquierda (de 10 a 1), compensamos sumando 1 al exponente (de 9 a 10).",
+                "El resultado final correcto es 1 x 10^10 glóbulos rojos."
+              ]
+            },
+            {
+              "exercise_id": "ex02_02_03",
+              "interaction_type": "equation_builder",
+              "instruction": "Un asteroide tiene una masa de $8 \\times 10^5$ kg y un volumen de $4 \\times 10^2$ m³. Calcula su densidad (Densidad = Masa / Volumen).",
+              "math_expression": "\\text{Densidad} = \\frac{8 \\times 10^5}{4 \\times 10^2} = [?] \\times 10^{[?]}",
+              "available_tiles": ["4", "3", "2", "7", "10"],
+              "correct_sequence": ["2", "3"],
+              "explanation": [
+                "La fórmula de la densidad nos exige dividir la masa total entre el espacio que ocupa (volumen).",
+                "Paso 1: Separamos el problema y dividimos primero los números grandes (coeficientes). 8 dividido entre 4 es exactamente 2.",
+                "Paso 2: Aplicamos la ley de exponentes para la división de bases iguales. Al dividir potencias de 10, DEBEMOS RESTAR el exponente del denominador al del numerador.",
+                "Paso 3: Restamos 5 (arriba) menos 2 (abajo), lo que nos da 3.",
+                "Unimos los resultados: La densidad del asteroide es de 2 x 10^3 kg/m³."
+              ]
+            },
+            {
+              "exercise_id": "ex02_02_04",
+              "interaction_type": "matching_pairs",
+              "instruction": "Desarrolla tu intuición científica. Empareja cada objeto real con su escala aproximada en notación científica.",
+              "pairs": [
+                { "left": "Población mundial actual", "right": "8 \\times 10^9 \\text{ personas}" },
+                { "left": "Tamaño de un virus", "right": "2 \\times 10^{-8} \\text{ metros}" },
+                { "left": "Grosor de un cabello", "right": "1 \\times 10^{-4} \\text{ metros}" },
+                { "left": "Distancia a la Luna", "right": "3.8 \\times 10^5 \\text{ km}" }
+              ],
+              "explanation": [
+                "Un buen estudiante de ciencias no solo calcula, sino que estima lógicamente los tamaños.",
+                "Regla visual: Los exponentes positivos muy grandes (como 10^9) representan cantidades inmensas o distancias cósmicas.",
+                "Los exponentes negativos (como 10^-8 o 10^-4) representan objetos microscópicos. Un virus (10^-8) es muchísimo más pequeño que el grosor de un cabello (10^-4)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_02_05",
+              "interaction_type": "pattern_grid",
+              "instruction": "En computación usamos prefijos griegos que esconden potencias de 10. Analiza el patrón y descubre el exponente de los Gigabytes (GB).",
+              "grid_data": [
+                { "cell": "1 Kilobyte (KB)", "value": "10^3 \\text{ bytes}" },
+                { "cell": "1 Megabyte (MB)", "value": "10^6 \\text{ bytes}" },
+                { "cell": "1 Gigabyte (GB)", "value": "10^{[?]} \\text{ bytes}" }
+              ],
+              "correct_answer": "9",
+              "options": ["8", "9", "12"],
+              "explanation": [
+                "El mundo digital crece en potencias de 10 estandarizadas internacionalmente.",
+                "Kilo significa mil (tres ceros, 10^3).",
+                "Mega significa un millón (seis ceros, 10^6).",
+                "Giga significa mil millones. Tiene nueve ceros, por lo tanto, su representación científica es 10^9.",
+                "Como dato curioso, el siguiente salto es el Terabyte (TB), que equivale a 10^12 bytes."
+              ]
+            },
+            {
+              "exercise_id": "ex02_02_06",
+              "interaction_type": "number_line",
+              "instruction": "Una startup ganó $4 \\times 10^6$ dólares en 2024 y $3 \\times 10^6$ dólares en 2025. ¿Cuántos millones (coeficiente final) ganó en total?",
+              "math_expression": "(4 \\times 10^6) + (3 \\times 10^6) = [?] \\times 10^6",
+              "correct_answer": 7,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
+              "explanation": [
+                "Este es un problema de suma directa. La clave para sumar o restar en notación científica es que ambos números deben tener EXACTAMENTE el mismo exponente.",
+                "Como ambos años tienen el exponente 10^6 (que representa los 'millones'), es como si estuviéramos sumando '4 manzanas + 3 manzanas'.",
+                "Paso 1: Sumamos directamente los coeficientes: 4 + 3 = 7.",
+                "Paso 2: El exponente se mantiene completamente inalterado en la suma y la resta. NO se suma a 10^12.",
+                "La startup facturó un total de 7 x 10^6 dólares (siete millones)."
+              ]
+            }
+          ]
         },
         {
           "lesson_id": "l02_03",
-          "lesson_title": "TÍTULO DE LECCIÓN AQUÍ",
-          "exercises": []
+          "lesson_title": "Tasas de interés simple y compuesto",
+          "exercises": [
+            {
+              "exercise_id": "ex02_03_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Le prestas S/ 500 a un amigo para su entrada a un concierto. Acuerdan un interés simple del 10% anual. ¿Cuánto dinero de PURA GANANCIA (solo el interés) te pagará después de 2 años?",
+              "math_expression": "I = C \\cdot r \\cdot t = 500 \\cdot 10\\% \\cdot 2",
+              "correct_answer_id": "opt_b",
+              "options": [
+                { "id": "opt_a", "text": "S/ 50" },
+                { "id": "opt_b", "text": "S/ 100" },
+                { "id": "opt_c", "text": "S/ 600" }
+              ],
+              "explanation": [
+                "El Interés Simple significa que la ganancia siempre se calcula sobre el dinero inicial (el capital), sin importar cuántos años pasen.",
+                "Paso 1: Calcula cuánto ganas en un solo año. El 10% de 500 es 50 soles.",
+                "Paso 2: Como el préstamo es por 2 años, simplemente multiplicas esa ganancia por dos: 50 x 2 = 100.",
+                "Ojo: La pregunta pide 'solo el interés' (la ganancia), que es 100. Si te pidieran el 'Monto total', sería el capital más el interés (500 + 100 = 600)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_03_02",
+              "interaction_type": "pattern_grid",
+              "instruction": "Sacas una tarjeta para comprar un iPhone de S/ 1000 al 10% anual. Analiza la diferencia y descubre cuánto debes en el Año 2 con Interés COMPUESTO.",
+              "grid_data": [
+                { "cell": "Año 1 (Ambos)", "value": "Deuda: S/ 1100" },
+                { "cell": "Año 2 (Interés Simple)", "value": "Deuda: S/ 1200" },
+                { "cell": "Año 2 (Interés Compuesto)", "value": "Deuda: S/ [?]" }
+              ],
+              "correct_answer": "1210",
+              "options": ["1200", "1210", "1300"],
+              "explanation": [
+                "Aquí está la magia (y el peligro) del Interés Compuesto: los intereses generan más intereses.",
+                "En el Interés Simple, cada año te cobran el 10% de los 1000 iniciales (100 soles fijos cada año). Por eso en el año 2 debes 1200.",
+                "En el Interés Compuesto, para el Año 2 te cobran el 10% de lo que debías en el Año 1 (es decir, el 10% de 1100).",
+                "El 10% de 1100 es 110. Si sumas 1100 + 110, tu nueva deuda es 1210. ¡Por eso las deudas de tarjetas de crédito crecen tan rápido!"
+              ]
+            },
+            {
+              "exercise_id": "ex02_03_03",
+              "interaction_type": "fill_in_blank",
+              "instruction": "Para calcular el Interés Compuesto usamos una fórmula donde el TIEMPO es un exponente. Completa el exponente si compras unas zapatillas a 3 años.",
+              "math_expression": "M = C(1 + r)^t \\rightarrow M = 300(1 + 0.05)^{[?]}",
+              "correct_answer": "3",
+              "options": ["1", "3", "300"],
+              "explanation": [
+                "La fórmula del monto en interés compuesto es: Monto = Capital * (1 + tasa)^tiempo.",
+                "El Capital (C) son los 300 soles que cuestan las zapatillas.",
+                "La tasa (r) es del 5%, que en decimales se escribe como 0.05.",
+                "El tiempo (t) siempre se coloca como el exponente (el número chiquito arriba). Como el préstamo es a 3 años, el exponente es 3."
+              ]
+            },
+            {
+              "exercise_id": "ex02_03_04",
+              "interaction_type": "equation_builder",
+              "instruction": "Ahorras S/ 2000 en el banco para comprarte una PC Gamer. El banco te da 5% de interés simple anual por 4 años. Arma la ecuación de tu ganancia (I = C * r * t).",
+              "math_expression": "I = [?] \\cdot 0.05 \\cdot [?]",
+              "available_tiles": ["4", "2000", "100", "5"],
+              "correct_sequence": ["2000", "4"],
+              "explanation": [
+                "La fórmula del interés simple es muy directa: multiplicas el Capital por la Tasa por el Tiempo.",
+                "Tu Capital inicial es 2000.",
+                "La tasa ya está convertida a decimal en la fórmula (5% = 0.05).",
+                "El tiempo que dejarás el dinero en el banco es 4 años.",
+                "Si resuelves 2000 * 0.05 * 4, descubrirás que ganarás 400 soles solo por tener tu dinero guardado."
+              ]
+            },
+            {
+              "exercise_id": "ex02_03_05",
+              "interaction_type": "matching_pairs",
+              "instruction": "¡Trampa de Admisión! La tasa y el tiempo SIEMPRE deben estar en la misma unidad. Empareja cada tasa 'pequeña' con su equivalencia ANUAL.",
+              "pairs": [
+                { "left": "2% mensual", "right": "24% anual" },
+                { "left": "10% semestral", "right": "20% anual" },
+                { "left": "5% bimestral", "right": "30% anual" },
+                { "left": "3% trimestral", "right": "12% anual" }
+              ],
+              "explanation": [
+                "Si un problema te da el tiempo en 'años' pero la tasa en 'meses', NUNCA los multipliques directo. Primero convierte la tasa a años.",
+                "Un año tiene 12 meses. Si te cobran 2% cada mes, al año es 2% * 12 = 24%.",
+                "Un año tiene 2 semestres (bloques de 6 meses). 10% semestral es 10% * 2 = 20% anual.",
+                "Un año tiene 6 bimestres (bloques de 2 meses). 5% bimestral es 5% * 6 = 30% anual.",
+                "Asegúrate de alinear las unidades y nunca fallarás esta pregunta."
+              ]
+            },
+            {
+              "exercise_id": "ex02_03_06",
+              "interaction_type": "number_line",
+              "instruction": "¿En cuántos años se DUPLICARÁ tu dinero si haces un negocio que te rinde 20% de interés simple anual? Ubica el tiempo en la recta.",
+              "math_expression": "C = C \\cdot 0.20 \\cdot t \\rightarrow 1 = 0.20 \\cdot t \\rightarrow t = [?]",
+              "correct_answer": 5,
+              "line_config": {
+                "min": 0,
+                "max": 10,
+                "step": 1
+              },
+              "explanation": [
+                "Truco Cachimbo: Para que tu dinero se 'duplique' usando interés simple, significa que tu ganancia (el interés) debe ser exactamente igual a tu Capital inicial (I = C).",
+                "Si ganas 20% en un año, significa que ganas 0.20 de tu capital cada año.",
+                "Para llegar al 100% (que es 1.0, es decir, todo tu capital), debes dividir 100% entre 20% (o 1 entre 0.20).",
+                "100 / 20 = 5. Tomará exactamente 5 años duplicar el dinero."
+              ]
+            }
+          ]
         },
         {
           "lesson_id": "l02_04",
-          "lesson_title": "TÍTULO DE LECCIÓN AQUÍ",
-          "exercises": []
-        },
-        {
-          "lesson_id": "l02_05",
-          "lesson_title": "TÍTULO DE LECCIÓN AQUÍ",
-          "exercises": []
+          "lesson_title": "Unidades derivadas y análisis dimensional",
+          "exercises": [
+            {
+              "exercise_id": "ex02_04_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "En el Sistema Internacional (SI) hay 7 unidades 'base', el resto son 'derivadas'. ¿Cuál de las siguientes es una unidad DERIVADA?",
+              "math_expression": "\\text{Identifica la intrusa}",
+              "correct_answer_id": "opt_c",
+              "options": [
+                { "id": "opt_a", "text": "Kilogramo (kg)" },
+                { "id": "opt_b", "text": "Segundo (s)" },
+                { "id": "opt_c", "text": "Newton (N)" }
+              ],
+              "explanation": [
+                "Las unidades 'Base' o fundamentales son los ladrillos del universo. Las más usadas son el metro (longitud), kilogramo (masa) y segundo (tiempo).",
+                "Las unidades 'Derivadas' se construyen combinando esos ladrillos (multiplicando o dividiendo).",
+                "El Newton (N) mide la fuerza y es una unidad derivada porque se construye combinando masa, longitud y tiempo (kg · m / s²)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_04_02",
+              "interaction_type": "pattern_grid",
+              "instruction": "Analiza cómo evoluciona el movimiento al dividirlo entre el tiempo (segundos). Descubre la unidad de la Aceleración.",
+              "grid_data": [
+                { "cell": "Posición (Distancia)", "value": "m" },
+                { "cell": "Velocidad (Distancia / Tiempo)", "value": "m/s" },
+                { "cell": "Aceleración (Velocidad / Tiempo)", "value": "[?]" }
+              ],
+              "correct_answer": "m/s^2",
+              "options": ["m/s", "m/s^2", "m^2/s"],
+              "explanation": [
+                "Piensa en la aceleración como 'qué tan rápido cambia tu velocidad'.",
+                "Si tu velocidad (m/s) cambia cada segundo (s), estás dividiendo (m/s) entre (s).",
+                "Por la regla de extremos y medios (o regla del sándwich), s multiplicando a s nos da segundos al cuadrado (s²).",
+                "Por lo tanto, la aceleración se mide en metros por segundo al cuadrado (m/s²)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_04_03",
+              "interaction_type": "equation_builder",
+              "instruction": "El Newton (N) es la fuerza necesaria para mover 1 kg de masa con una aceleración de 1 m/s². Arma su equivalencia.",
+              "math_expression": "1 \\text{ N} = 1 \\text{ kg} \\cdot \\frac{[?]}{[?]^2}",
+              "available_tiles": ["m", "s", "J", "kg"],
+              "correct_sequence": ["m", "s"],
+              "explanation": [
+                "Para no memorizar a ciegas, recuerda la Segunda Ley de Newton: Fuerza = Masa x Aceleración (F = m * a).",
+                "La Masa se mide en kilogramos (kg).",
+                "La Aceleración se mide en metros por segundo al cuadrado (m/s²).",
+                "Juntando todo: 1 Newton es igual a 1 kg * m / s². ¡Fija de examen de admisión!"
+              ]
+            },
+            {
+              "exercise_id": "ex02_04_04",
+              "interaction_type": "fill_in_blank",
+              "instruction": "El Joule (J) mide la Energía y el Trabajo. Se obtiene al aplicar una Fuerza (Newtons) a lo largo de una Distancia (metros). Completa la fórmula.",
+              "math_expression": "1 \\text{ Joule} = 1 \\text{ Newton} \\cdot 1 \\text{ [?]}",
+              "correct_answer": "metro",
+              "options": ["segundo", "metro", "kilogramo"],
+              "explanation": [
+                "En física, haces 'Trabajo' cuando empujas algo y logras moverlo.",
+                "Trabajo = Fuerza x Distancia.",
+                "La fuerza son los Newtons (N) y la distancia son los metros (m).",
+                "Por lo tanto, 1 Joule equivale a 1 Newton multiplicado por 1 metro (N·m)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_04_05",
+              "interaction_type": "matching_pairs",
+              "instruction": "¡Vocabulario técnico de Cachimbo! Empareja la magnitud física con su unidad derivada correcta.",
+              "pairs": [
+                { "left": "Fuerza", "right": "Newton (N)" },
+                { "left": "Energía / Trabajo", "right": "Joule (J)" },
+                { "left": "Potencia (Energía por segundo)", "right": "Watt (W)" },
+                { "left": "Presión (Fuerza sobre un área)", "right": "Pascal (Pa)" }
+              ],
+              "explanation": [
+                "Un buen ingeniero sabe de memoria estas 4 derivadas:",
+                "- Si empujas un auto, aplicas Newtons (Fuerza).",
+                "- Si logras moverlo, gastas Joules (Energía).",
+                "- Si lo haces muy rápido, tienes muchos Watts (Potencia, como un motor).",
+                "- Si empujas con una aguja en vez de toda la mano, aumentas los Pascales (Presión)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_04_06",
+              "interaction_type": "number_line",
+              "instruction": "Truco Cachimbo: Un auto viaja a 36 km/h. Conviértelo a m/s usando la fracción mágica (5/18) y ubica el valor en la recta.",
+              "math_expression": "36 \\cdot \\frac{5}{18} = [?] \\text{ m/s}",
+              "correct_answer": 10,
+              "line_config": {
+                "min": 0,
+                "max": 20,
+                "step": 2
+              },
+              "explanation": [
+                "En los exámenes, casi siempre te dan la velocidad en km/h, pero las fórmulas exigen usar m/s (unidades del SI).",
+                "Hacer la conversión a mano (multiplicar por 1000 y dividir entre 3600) te quita tiempo.",
+                "El atajo supremo es multiplicar siempre tu velocidad por la fracción (5/18).",
+                "Resolviendo: 36 entre 18 es 2. Luego 2 por 5 es 10. ¡El auto viaja a 10 m/s!"
+              ]
+            }
+          ]
         }
       ]
     },
