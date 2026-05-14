@@ -689,8 +689,115 @@
       "lessons": [
         {
           "lesson_id": "l02_01",
-          "lesson_title": "TÍTULO DE LECCIÓN AQUÍ",
-          "exercises": []
+          "lesson_title": "Operaciones con números expresados en notación ciéntífica",
+          "exercises": [
+            {
+              "exercise_id": "ex02_01_01",
+              "interaction_type": "multiple_choice",
+              "instruction": "Resuelve la siguiente multiplicación en notación científica.",
+              "math_expression": "(3 \\times 10^4) \\cdot (2 \\times 10^5)",
+              "correct_answer_id": "opt_a",
+              "options": [
+                { "id": "opt_a", "text": "6 \\times 10^9" },
+                { "id": "opt_b", "text": "5 \\times 10^{20}" },
+                { "id": "opt_c", "text": "6 \\times 10^{20}" }
+              ],
+              "explanation": [
+                "Para multiplicar números en notación científica, debemos separar la operación en dos partes: los coeficientes (los números que van antes del 10) y las potencias de base 10.",
+                "Paso 1: Multiplica los coeficientes de forma normal. En este caso, 3 multiplicado por 2 es igual a 6.",
+                "Paso 2: Aplica la regla del producto para las potencias de 10. Cuando multiplicas bases iguales, la regla dice que debes SUMAR los exponentes. Sumamos 4 + 5 = 9.",
+                "Paso 3: Une ambos resultados. El coeficiente 6 se multiplica por la nueva potencia de 10^9.",
+                "Dato Cachimbo: Un error súper común en exámenes es multiplicar los exponentes en lugar de sumarlos. ¡Recuerda siempre sumarlos!"
+              ]
+            },
+            {
+              "exercise_id": "ex02_01_02",
+              "interaction_type": "fill_in_blank",
+              "instruction": "En una división, los exponentes se restan. Completa el exponente final de esta operación.",
+              "math_expression": "\\frac{8 \\times 10^7}{4 \\times 10^3} = 2 \\times 10^{[?]}",
+              "correct_answer": "4",
+              "options": ["4", "10", "21"],
+              "explanation": [
+                "Al igual que en la multiplicación, la división en notación científica se ataca en dos frentes separados.",
+                "Paso 1: Divide los coeficientes. Aquí dividimos el numerador 8 entre el denominador 4, lo que nos da exactamente 2.",
+                "Paso 2: Aplica la regla del cociente para las potencias. Cuando divides bases iguales, DEBES RESTAR el exponente de abajo al exponente de arriba.",
+                "Paso 3: Restamos los exponentes: 7 (el de arriba) menos 3 (el de abajo) es igual a 4.",
+                "El resultado final se lee como 2 por 10 elevado a la cuarta potencia. Por lo tanto, el número que falta en la casilla es el 4."
+              ]
+            },
+            {
+              "exercise_id": "ex02_01_03",
+              "interaction_type": "pattern_grid",
+              "instruction": "Un número científico válido DEBE tener su coeficiente entre 1 y 9.99. Analiza el patrón de ajuste y completa la última celda.",
+              "grid_data": [
+                { "cell": "450 \\times 10^2", "value": "4.5 \\times 10^4" },
+                { "cell": "0.35 \\times 10^5", "value": "3.5 \\times 10^4" },
+                { "cell": "75 \\times 10^6", "value": "[?] \\times 10^7" }
+              ],
+              "correct_answer": "7.5",
+              "options": ["7.5", "0.75", "750"],
+              "explanation": [
+                "Esta es la 'Trampa del Ajuste'. Muchos estudiantes llegan a la respuesta correcta pero no está en las alternativas porque no está en formato estándar.",
+                "Regla de ajuste: Si haces el coeficiente MÁS PEQUEÑO (moviendo la coma a la izquierda), debes compensarlo haciendo el exponente MÁS GRANDE (sumando).",
+                "En el caso de '75 x 10^6', el 75 es mayor que 10, por lo que es inválido en notación científica pura.",
+                "Movemos la coma decimal un espacio hacia la izquierda para convertir el 75 en 7.5. Como hicimos el número una posición más pequeño, le sumamos +1 al exponente.",
+                "El exponente 6 se convierte en 7. El número correcto es 7.5."
+              ]
+            },
+            {
+              "exercise_id": "ex02_01_04",
+              "interaction_type": "equation_builder",
+              "instruction": "Para sumar o restar, los exponentes DEBEN ser exactamente iguales. Ajusta la ecuación para poder sumar.",
+              "math_expression": "(4 \\times 10^5) + (3 \\times 10^4) = (40 \\times 10^4) + (3 \\times 10^4) = [?] \\times 10^{[?]}",
+              "available_tiles": ["43", "5", "4", "7"],
+              "correct_sequence": ["43", "4"],
+              "explanation": [
+                "La suma y resta son las operaciones más peligrosas en notación científica porque no puedes simplemente sumar los coeficientes si los exponentes de 10 son diferentes.",
+                "Es como intentar sumar manzanas con naranjas. Primero debemos igualarlos.",
+                "Paso 1: Transformamos la potencia mayor (10^5) para que sea igual a la menor (10^4). Para bajar el exponente de 5 a 4 (le restamos 1), debemos compensar moviendo la coma del coeficiente un espacio a la DERECHA.",
+                "Paso 2: El '4 x 10^5' se convierte en '40 x 10^4'. Ahora ambos números tienen 'x 10^4'.",
+                "Paso 3: Ahora sí podemos sumar los coeficientes como si fuera álgebra básica: 40 + 3 = 43.",
+                "El resultado temporal es 43 x 10^4."
+              ]
+            },
+            {
+              "exercise_id": "ex02_01_05",
+              "interaction_type": "matching_pairs",
+              "instruction": "Empareja cada operación con su resultado final correcto. ¡Aplica todas las reglas que has aprendido!",
+              "pairs": [
+                { "left": "(2 \\times 10^3) \\cdot (4 \\times 10^2)", "right": "8 \\times 10^5" },
+                { "left": "\\frac{6 \\times 10^5}{2 \\times 10^2}", "right": "3 \\times 10^3" },
+                { "left": "(5 \\times 10^4) + (3 \\times 10^4)", "right": "8 \\times 10^4" },
+                { "left": "(3 \\times 10^2)^2", "right": "9 \\times 10^4" }
+              ],
+              "explanation": [
+                "Repaso general para exámenes de admisión universitario:",
+                "Multiplicación: Se multiplican los coeficientes (2x4=8) y se SUMAN los exponentes (3+2=5).",
+                "División: Se dividen los coeficientes (6/2=3) y se RESTAN los exponentes (5-2=3).",
+                "Suma (con exponentes iguales): Solo se suman los coeficientes (5+3=8) y el exponente se mantiene IDÉNTICO.",
+                "Potencia: El coeficiente se eleva a la potencia (3 al cuadrado es 9) y los exponentes de la base 10 se MULTIPLICAN (2x2=4)."
+              ]
+            },
+            {
+              "exercise_id": "ex02_01_06",
+              "interaction_type": "number_line",
+              "instruction": "Eleva toda la expresión al cubo. ¿Cuál será el valor del nuevo EXPONENTE de la base 10? Ubícalo en la recta.",
+              "math_expression": "(2 \\times 10^3)^3 = 8 \\times 10^{[?]}",
+              "correct_answer": 9,
+              "line_config": {
+                "min": 0,
+                "max": 12,
+                "step": 3
+              },
+              "explanation": [
+                "Esta es la operación de 'Potencia de una Notación Científica'. El exponente exterior (el 3) afecta absolutamente a todo lo que está dentro del paréntesis.",
+                "Paso 1: Eleva el coeficiente al cubo. 2 al cubo significa 2 * 2 * 2, lo cual nos da 8.",
+                "Paso 2: Aplica la regla de 'potencia de una potencia' a la base 10. Esta regla nos dicta que los exponentes no se suman, sino que se MULTIPLICAN.",
+                "Paso 3: Multiplicamos el exponente interno (3) por el exponente externo (3). 3 * 3 = 9.",
+                "El resultado completo es 8 x 10^9. Por lo tanto, el exponente que va en la recta numérica es el 9."
+              ]
+            }
+          ]
         },
         {
           "lesson_id": "l02_02",
